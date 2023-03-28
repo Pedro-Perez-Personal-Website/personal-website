@@ -1,0 +1,67 @@
+/*We adjust the page and us flex to group the sections of page*/
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+/*------This section covers the header of the document
+we use row-reverse to separate the navigation and logo------*/
+header.container{
+    display: flex;
+    flex-flow: row-reverse wrap;
+    background-color: #e3e6e4;
+    align-items: baseline;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+}
+/*We modify the logo*/
+span{
+    font-size:large;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+/*----This section goes for the main-----*/
+div.container{
+    display: flex;
+    flex-flow: column wrap;
+}
+/*----This section goes for the about-----*/
+
+
+
+/*----This section goes for the portfolio-----*/
+
+
+
+/*------This section goes for the footer------*/
+/* We us flex to separate our articles and add some color */
+footer.container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: auto;
+    background-color: gray;
+
+}
+
+/*-------- Footer articles style-------*/
+article{
+    height: auto;
+    width: 20%;
+    padding-bottom: 15px;
+}
+article:hover{
+    width: 40%;
+    background-color: rgb(150, 147, 147);
+}
+article>div.container{
+    display: none;
+}
+article:hover div.container{
+     display: flex;
+}
+
