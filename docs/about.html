@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="style.css">
     <!--Title on the tab-->
     <title>PR web site</title>
+
 </head>
 <body class="container">
     <!-- We create our navigation tab on the header and use it as a container
     to use flex on css-->
     <header class="container">
-        <span>Peter Rivers</span>
+        <span id="logo" onclick="start()">Peter Rivers</span>
         <nav>
             <!--We create three sections of the page-->
             <a href="index.html">Home</a>
@@ -21,8 +22,68 @@
             <a href="about.html">About</a>
         </nav>
     </header>
-    <div>
+
+    <!--We create a container for our 3 section -->
+    <div class="container">
         <h1>About</h1>
+        <!--here i write about my son and how it has help achieve my goals-->
+        <section>
+            <h3>Dad</h3>
+            <span class="container">
+                <a href="/imgs/mySon.jpg" target="_blank"><img src="/imgs/mySon.jpg" alt="Picture with my son" style="width: 200px;" class="img"></a>
+                <p>
+                Here's a picture of my son and I chilling on the chairs beside de pool on a summer day. He just 
+                told me how he couldn't wait for summer to start and go back. He loves pools and mole.
+                He is 7 and growing. Being a dad at a young age has help me be more responsible and have a clear goal.
+                Our well being. When I saw all the benefits and help Amazon provide I was excited to 
+                get to my programming path. I think learning a programming language is a very important skill
+                for this next century. I wanna be able to share this abilities with him and
+                transmit all this excitement and the power of javascript. 
+                <br>
+                <br>
+                Here's a picture of my son and I chilling on the chairs beside de pool on a summer day. He just 
+                told me how he couldn't wait for summer to start and go back. He loves pools and mole.
+                He is 7 and growing. Being a dad at a young age has help me be more responsible and have a clear goal.
+                Our well being. When I saw all the benefits and help Amazon provide I was excited to 
+                get to my programming path. I think learning a programming language is a very important skill
+                for this next century. I wanna be able to share this abilities with him and
+                transmit all this excitement and the power of javascript.
+                </p>
+            </span>
+        </section>
+
+        <!--About a club that i join and helps me feel useful-->
+        <section>
+            <h3>Rotaractor</h3>
+            <span class="container">
+                <p>
+                The first time I did contact with Rotaract I was in Ensenada, about to go to Alaska for a summer job.
+                Then, when I came back a few years later, on Tj I found a club and participate in some activities but 
+                it didn't last long because I had to move again.
+                This time I ready and loaded. I just became member last month and cant wait for summer because I'll be part of the board.
+                There's a lot of potential in our team and we are ready to help our community in this hard times.
+                Being at Rotaract means team work, and multidisciplinary work. This skills are also used in the developing teams.
+                Helping the community and transmitting those values to my son are why I join Rotaract.
+                </p>
+                <img src="/imgs/LaBestiaRotaract.jpeg" alt="Doing community service" style="width: 200px;">
+            </span>
+        </section>
+
+        <!--About how i got into web development-->
+        <section>
+            <h3>Developer</h3>
+            <span class="container">
+                <img src="/imgs/screen.jpg" alt="Programming" style="width: 200px;">
+                <p>
+                I think my first  contact with an html file was on elementery school 
+                And I believe we use a combination of word, text editor, and paint. 
+                I really don't remember what we use but I was very surprise with what I 
+                had built. Saddly I wouldn't had contact with it till High School. There 
+                I use Dreamweaver and things got easier. Now with all the tools at hand, 
+                I'm ready to build something cool.
+                </p>
+            </span>
+        </section>
 
     </div>
     
@@ -35,7 +96,7 @@
             <div class="container">
             <a href="">Facebook</a>
             <a href="">Github</a>
-            <a href="">LinkdIn</a>
+            <a href="">LinkedIn</a>
             </div>
         </article>
         
@@ -64,4 +125,7 @@
     
     
 </body>
+
+<!--Add the JScript file -->
+<script  src="" id="script"></script>
 </html>

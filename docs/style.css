@@ -2,21 +2,27 @@
 body{
     display: flex;
     flex-direction: column;
+    /*--set margin to 0 so the content covers all the viewport---*/
     margin: 0px;
+    gap: 10px;
+    
 }
 /*------This section covers the header of the document
 we use row-reverse to separate the navigation and logo------*/
 header.container{
     display: flex;
+    /*shorthand-direction--wrap*/
     flex-flow: row-reverse wrap;
     background-color: #e3e6e4;
+    /*align header items logo and navbar*/
     align-items: baseline;
     justify-content: space-between;
+    /*Dont roll into the page */
     position: fixed;
     width: 100%;
 }
 /*We modify the logo*/
-span{
+#logo{
     font-size:large;
     font-style: oblique;
     font-weight: bold;
@@ -26,9 +32,21 @@ span{
 div.container{
     display: flex;
     flex-flow: column wrap;
+    /*space between items*/
+    gap: 10px;
+    align-content: center;
 }
-/*----This section goes for the about-----*/
-
+/*----This section goes for the about-   ----*/
+span.container{
+    display: flex;
+    gap: 10px;
+}
+section{
+    border: 1px solid black;
+    width: 80%;
+    padding: 0px 30px;
+    background-color: rgb(227, 187, 148);
+}
 
 
 /*----This section goes for the portfolio-----*/
@@ -43,8 +61,9 @@ footer.container{
     justify-content: center;
     gap: 10px;
     width: 100%;
-    height: auto;
+    height: 200px;
     background-color: gray;
+
 
 }
 
@@ -54,14 +73,26 @@ article{
     width: 20%;
     padding-bottom: 15px;
 }
+/*item goes bigger and align changes when hover*/
 article:hover{
     width: 40%;
     background-color: rgb(150, 147, 147);
 }
 article>div.container{
+    /*hide elements on the article*/
     display: none;
+
 }
 article:hover div.container{
      display: flex;
 }
 
+/*------Images---------*/
+img{
+    max-height: 200px;
+    margin-bottom: 15px;
+}
+/*CSS EVENTS*/
+img:hover{
+    rotate: 180deg;
+}
