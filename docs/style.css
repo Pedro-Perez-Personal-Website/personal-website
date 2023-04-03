@@ -7,6 +7,15 @@ body{
     gap: 10px;
     
 }
+/*align the content of the page*/
+div.container{
+    display: flex;
+    flex-flow: column wrap;
+    /*space between items*/
+    gap: 10px;
+    align-items: center;
+}
+
 /*------This section covers the header of the document
 we use row-reverse to separate the navigation and logo------*/
 header.container{
@@ -29,14 +38,9 @@ header.container{
 }
 
 /*----This section goes for the main-----*/
-div.container{
-    display: flex;
-    flex-flow: column wrap;
-    /*space between items*/
-    gap: 10px;
-    align-content: center;
-}
-/*----This section goes for the about-   ----*/
+
+
+/*----This section goes for the about-----*/
 span.container{
     display: flex;
     gap: 10px;
@@ -45,12 +49,16 @@ section{
     border: 1px solid black;
     width: 80%;
     padding: 0px 30px;
-    background-color: rgb(227, 187, 148);
+    
 }
 
-
 /*----This section goes for the portfolio-----*/
+/*Move the content when selected*/
+section.portfolio:hover{
+    background-color: aqua;
+    transition-duration: 4s;
 
+}
 
 
 /*------This section goes for the footer------*/
@@ -66,7 +74,6 @@ footer.container{
 
 
 }
-
 /*-------- Footer articles style-------*/
 article{
     height: auto;
@@ -90,9 +97,28 @@ article:hover div.container{
 /*------Images---------*/
 img{
     max-height: 200px;
+    height: auto;
     margin-bottom: 15px;
 }
-/*CSS EVENTS*/
-img:hover{
+/*from about---*/
+img.about:hover{
     rotate: 180deg;
+    transition-duration: 4s;
 }
+/*From portfolio*/
+img.portfolio{
+    width: 200px;
+}
+img.portfolio:hover{
+    width:250px;
+    transition-duration: 2s;
+
+}
+
+/*Links*/
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
