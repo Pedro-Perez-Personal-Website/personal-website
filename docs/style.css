@@ -1,3 +1,15 @@
+/*Table of content
+1.- Main
+2.- Header
+3.- Home
+4.- About
+5.- Portfolio
+6.- Footer
+7.- Images
+8.-Links
+*/
+
+/*1.- Main*/
 /*We adjust the page and us flex to group the sections of page*/
 body{
     display: flex;
@@ -16,19 +28,24 @@ div.container{
     align-items: center;
 }
 
-/*------This section covers the header of the document
+/*2. Header------This section covers the header of the document
 we use row-reverse to separate the navigation and logo------*/
 header.container{
     display: flex;
     /*shorthand-direction--wrap*/
     flex-flow: row-reverse wrap;
-    background-color: #e3e6e4;
+    background-color: gray;
     /*align header items logo and navbar*/
     align-items: baseline;
     justify-content: space-between;
     /*Dont roll into the page */
     position: fixed;
     width: 100%;
+    z-index: 3;
+}
+header.home{
+    bottom: 100px;
+    justify-content: center;
 }
 /*We modify the logo*/
 #logo{
@@ -37,12 +54,33 @@ header.container{
     font-weight: bold;
 }
 
-/*----This section goes for the main-----*/
+/*3.- Home----This section goes for the main-----*/
+section.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80%;
 
 
-/*----This section goes for the about-----*/
+}
+span{
+    font-style: italic;
+    position: sticky;
+}
+div.home{
+    height: 100vh;
+}
+h2{
+    font-family:cursive;
+    font-size: xx-large;
+}
+
+
+
+/*4.- About----This section goes for the about-----*/
 span.container{
     display: flex;
+    /*separates the content but not the sides*/
     gap: 10px;
 }
 section{
@@ -52,7 +90,7 @@ section{
     
 }
 
-/*----This section goes for the portfolio-----*/
+/*5.- Portfolio----This section goes for the portfolio-----*/
 /*Move the content when selected*/
 section.portfolio:hover{
     background-color: aqua;
@@ -61,7 +99,7 @@ section.portfolio:hover{
 }
 
 
-/*------This section goes for the footer------*/
+/*6.- Footer------This section goes for the footer------*/
 /* We us flex to separate our articles and add some color */
 footer.container{
     display: flex;
@@ -93,8 +131,22 @@ article>div.container{
 article:hover div.container{
      display: flex;
 }
+/* ------index-----------*/
 
-/*------Images---------*/
+footer.home{
+    position: fixed;
+    bottom: 10px;
+    height: auto;
+    background-color: transparent;
+}
+a.footer:hover{
+    position: relative;
+    bottom: 10px;
+
+}
+
+
+/*7.- Images------Images---------*/
 img{
     max-height: 200px;
     height: auto;
@@ -115,10 +167,9 @@ img.portfolio:hover{
 
 }
 
-/*Links*/
+/*8.-Links*/
 a{
     text-decoration: none;
     color: black;
 }
-
 
