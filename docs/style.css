@@ -7,6 +7,7 @@
 6.- Footer
 7.- Images
 8.-Links
+9.-Media Queries
 */
 
 /*1.- Main*/
@@ -46,6 +47,7 @@ header.container{
 header.home{
     bottom: 100px;
     justify-content: center;
+    
 }
 /*We modify the logo*/
 #logo{
@@ -54,14 +56,12 @@ header.home{
     font-weight: bold;
 }
 
-/*3.- Home----This section goes for the main-----*/
+/*3.- Home----This section goes for the homepage-----*/
 section.home{
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 80%;
-
-
 }
 span{
     font-style: italic;
@@ -74,8 +74,6 @@ h2{
     font-family:cursive;
     font-size: xx-large;
 }
-
-
 
 /*4.- About----This section goes for the about-----*/
 span.container{
@@ -93,11 +91,9 @@ section{
 /*5.- Portfolio----This section goes for the portfolio-----*/
 /*Move the content when selected*/
 section.portfolio:hover{
-    background-color: aqua;
-    transition-duration: 4s;
-
+    width: 85%;
+    transition-duration: 1s;
 }
-
 
 /*6.- Footer------This section goes for the footer------*/
 /* We us flex to separate our articles and add some color */
@@ -154,7 +150,7 @@ img{
 }
 /*from about---*/
 img.about:hover{
-    rotate: 180deg;
+    rotate: 360deg;
     transition-duration: 4s;
 }
 /*From portfolio*/
@@ -166,10 +162,24 @@ img.portfolio:hover{
     transition-duration: 2s;
 
 }
+/*for footer of home*/
+#linkedin{
+    height: 40px;
+    width: 40px;
+}
+#github{
+    height: 40px;
+    width: 40px;
+}
+#instagram{
+    height: 40px;
+    width: 40px;
+}
 
 /*8.-Links*/
 a{
     text-decoration: none;
     color: black;
 }
+/*9.-Media Queries*/
 
