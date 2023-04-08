@@ -1,0 +1,217 @@
+/*Table of content
+1.- Main
+2.- Header
+3.- Home
+4.- About
+5.- Portfolio
+6.- Footer
+7.- Images
+8.-Links
+9.-Media Queries
+*/
+
+/*1.- Main*/
+/*We adjust the page and us flex to group the sections of page*/
+body{
+    display: flex;
+    flex-direction: column;
+    /*--set margin to 0 so the content covers all the viewport---*/
+    margin: 0px;
+    gap: 10px;
+    background-color: black;
+    color: aliceblue;
+}
+/*align the content of the page*/
+div.container{
+    display: flex;
+    flex-flow: column wrap;
+    /*space between items*/
+    gap: 10px;
+    align-items: center;
+}
+section{
+    width: 80%;
+    padding: 0px 30px;
+    box-shadow: 2px 2px 5px white;
+    
+}
+/*2. Header------This section covers the header of the document
+we use row-reverse to separate the navigation and logo------*/
+header.container{
+    display: flex;
+    /*shorthand-direction--wrap*/
+    flex-flow: row-reverse wrap;
+    background-color: gray;
+    /*align header items logo and navbar*/
+    align-items: baseline;
+    justify-content: space-between;
+    /*Dont roll into the page */
+    position: fixed;
+    width: 100%;
+    /*higher index so gos to the front*/
+    z-index: 3;
+}
+header.home{
+    bottom: 100px;
+    justify-content: center;
+    background-color: rgba(211, 211, 211, 0.200);
+}
+/*We modify the logo*/
+#logo{
+    font-size:large;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+/*3.- Home----This section goes for the homepage-----*/
+section.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 83%;
+}
+span{
+    font-style: italic;
+    position: sticky;
+    right: 10px;
+}
+div.home{
+    height: 100vh;
+}
+h2{
+    font-family:cursive;
+    font-size: xx-large;
+}
+
+/*4.- About----This section goes for the about-----*/
+span.container{
+    display: flex;
+    /*separates the content but not the sides*/
+    gap: 10px;
+}
+
+
+/*5.- Portfolio----This section goes for the portfolio-----*/
+
+
+/*6.- Footer------This section goes for the footer------*/
+/* We us flex to separate our articles and add some color */
+footer.container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 200px;
+    background-color: gray;
+
+
+}
+/*-------- Footer articles style-------*/
+article{
+    height: auto;
+    width: 20%;
+    padding-bottom: 15px;
+}
+
+/* ------index-----------*/
+
+footer.home{
+    position: fixed;
+    bottom: 10px;
+    height: auto;
+    background-color: transparent;
+}
+
+
+/*7.- Images------Images---------*/
+img{
+    max-height: 200px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/*From portfolio*/
+img.portfolio{
+    width: 200px;
+}
+/*for footer of home*/
+#linkedin{
+    height: 40px;
+    width: 40px;
+}
+#github{
+    height: 40px;
+    width: 40px;
+}
+#instagram{
+    height: 40px;
+    width: 40px;
+}
+
+/*8.-Links*/
+a{
+    text-decoration: none;
+    
+    color: white;
+}
+/*9.-Media Queries*/
+/*Laptop*/
+@media only screen and (min-width:768px){
+    /*-home-header-*/
+    a.home:hover{
+        padding: 2px;
+        background-color: rgba(211, 211, 211, 0.005); ;
+    }
+    /*Move the content when selected*/
+    section.portfolio:hover{    /*Move hover to a media query*/
+        width: 85%;
+        transition-duration: 1s;
+        background-color: rgba(255, 255, 255, 0.135);
+    }
+    img.portfolio:hover{
+        width:250px;
+        transition-duration: 2s;
+    
+    }
+    /*item goes bigger and align changes when hover*/
+    article:hover{
+        width: 40%;
+        background-color: rgb(150, 147, 147);
+    }
+    article>div.container{
+        /*hide elements on the article*/
+        display: none;
+    }
+    article:hover div.container{
+        display: flex;
+    }
+    /*from about---*/
+    img.about:hover{
+        rotate: 360deg;
+        transition-duration: 4s;
+    }
+    /*footer*/   
+    a.footer:hover{
+        position: relative;
+        bottom: 10px;
+    
+    }
+}
+
+/*-Tablet--*/
+
+/*-Cell-*/
+@media only screen and (max-width:600px){
+    /*Center content*/
+    span.container{
+        flex-direction: column;
+        align-items: center;
+    }
+    section{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+}
