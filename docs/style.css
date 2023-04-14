@@ -4,10 +4,11 @@
 3.- Home
 4.- About
 5.- Portfolio
+ .- Contact
 6.- Footer
 7.- Images
-8.-Links
-9.-Media Queries
+8.- Links
+9.- Media Queries
 */
 
 /*1.- Main*/
@@ -93,10 +94,34 @@ span.container{
 
 /*5.- Portfolio----This section goes for the portfolio-----*/
 
+/*.-Contact----*/
+div#contact{
+    position: relative;
+    top:20px;
+}section#contact{
+    display: flex;
+    flex-flow: row wrap;
+}form.container{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 5px;
+    width: 50%;
+}div.form{
+    display: flex;
+    flex-flow: row wrap;
+}label{
+    display: inline-block;
+    width: 62px;
+    text-align: left;
+}#submit{
+    position: relative;
+    width: 90px;
+    margin-bottom: 10px;
+}
 
 /*6.- Footer------This section goes for the footer------*/
 /* We us flex to separate our articles and add some color */
-footer.container{
+footer{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -114,9 +139,15 @@ article{
     padding-bottom: 15px;
 }
 
-/* ------index-----------*/
+/* ------Fixed-----------*/
 
 footer.home{
+    position: fixed;
+    bottom: 10px;
+    height: auto;
+    background-color: transparent;
+}
+footer.contact{
     position: fixed;
     bottom: 10px;
     height: auto;
@@ -197,12 +228,25 @@ a{
         bottom: 10px;
     
     }
+    /*Contact*/
+    input:focus,
+    textarea:focus {
+    /* Additional highlight for focused elements */
+        border-color: #000;
+    }
 }
 
 /*-Tablet--*/
+@media only screen and (max-width:800px){
+    /*
+    div.form{
+        flex-direction: column;
+    }
+    */
+}
 
 /*-Cell-*/
-@media only screen and (max-width:600px){
+@media only screen and (max-width:400px){
     /*Center content*/
     span.container{
         flex-direction: column;
@@ -212,6 +256,11 @@ a{
         display: flex;
         flex-flow: column wrap;
         align-items: center;
+    }section#contact{
+        flex-direction: column;
+        align-items: flex-start;
+    }div.form{
+        flex-direction: column;
     }
 
 }

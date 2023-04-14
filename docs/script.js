@@ -23,3 +23,30 @@ function key(){
         alert("Keep Looking")
     }
 }
+
+//here we add the form request
+console.log("Page Loaded")
+const form = document.querySelector("#form")//select the form
+const submitButton = document.querySelector("#submit")//the sumbit
+const scriptURL = "http://httpbin.org/post"
+console.log("Its working..")
+
+form.addEventListener('submit', e => {//add event is a function?
+    submitButton.disabled = true
+    e.preventDefault() //apply a method to the function?
+    let requestBody = new FormData(form)
+    console.log(requestBody)
+  //check the variable
+    fetch(scriptURL, { method: 'POST', body: requestBody})
+        .then(response => {
+            alert('Awebooo!!')
+            submitButton.disabled = false
+            console.log('Success')
+            response.json
+        })
+        .then(data => console.log(data))
+        .catch(error => {
+            alert('Error!', error.message)
+            submitButton.disabled = false
+    })
+})
